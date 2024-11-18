@@ -40,13 +40,13 @@ const VosPhotos = () => {
           value={uploaderName}
           onChange={(e) => setUploaderName(e.target.value)}
         />
-        <button onClick={handleAddPhoto} className="btn text-white" style={{backgroundColor:'#592F2F'}}>
+        <button onClick={handleAddPhoto} className="btn text-white" style={{ backgroundColor: '#592F2F' }}>
           Ajouter une photo
         </button>
       </div>
 
       {/* Galerie de photos */}
-      <div className="row">
+      {/* <div className="row">
         {photos.map((photo) => (
           <div className="col-md-4 mb-4" key={photo.id}>
             <div className="card">
@@ -57,7 +57,7 @@ const VosPhotos = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
