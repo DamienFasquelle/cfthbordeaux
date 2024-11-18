@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Repas from './pages/Repas';
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/vos-photos" element={<VosPhotos />} />
         <Route path="/sitemap" element={<SiteMap />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
