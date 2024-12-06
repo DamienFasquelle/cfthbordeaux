@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Publier une image</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.filePath) }}
+        <button class="btn btn-success">Uploader</button>
+    {{ form_end(form) }}
+{% endblock %}
