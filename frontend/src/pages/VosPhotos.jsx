@@ -26,7 +26,7 @@ const VosPhotos = () => {
 
       {/* Ajouter une nouvelle photo */}
       <div className="mb-4">
-        <input
+        {/* <input
           type="text"
           placeholder="URL de l'image"
           className="form-control mb-2"
@@ -39,7 +39,7 @@ const VosPhotos = () => {
           className="form-control mb-2"
           value={uploaderName}
           onChange={(e) => setUploaderName(e.target.value)}
-        />
+        /> */}
         <button onClick={handleAddPhoto} className="btn text-white" style={{ backgroundColor: '#592F2F' }}>
           Ajouter une photo
         </button>

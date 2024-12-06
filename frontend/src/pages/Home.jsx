@@ -5,8 +5,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 const Home = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false); // Contrôle de l'ouverture du modal
-  const [currentImage, setCurrentImage] = useState(""); // Image actuellement affichée dans le modal
+  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const [currentImage, setCurrentImage] = useState(""); 
 
   const slideStyle = {
     width: "100%",

@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer className="text-dark py-4">
       <hr />
-      <div className="container">
+      <div className="container fs-5">
         {/* Section Contact */}
         <div className="row">
           <div className="col-md-6 mb-3">
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center mt-3">
-        <p>&copy; 2024 Mon Projet React</p>
+        <p>&copy; 2024 Damien Fasquelle</p>
       </div>
     </footer>
   );
