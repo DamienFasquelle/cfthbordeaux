@@ -9,6 +9,8 @@ import Presentation from './pages/Presentation';
 import Quizz from './pages/Quizz';
 import VosPhotos from './pages/VosPhotos';
 import SiteMap from './SiteMap';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 const App = () => {
   return (
@@ -22,6 +24,8 @@ const App = () => {
         <Route path="/quizz" element={<Quizz />} />
         <Route path="/vos-photos" element={<VosPhotos />} />
         <Route path="/sitemap" element={<SiteMap />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
       <Footer />
     </Router>

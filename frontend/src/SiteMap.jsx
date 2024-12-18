@@ -11,6 +11,9 @@ const SiteMap = () => {
         <li><a href="/presentation">Présentation</a></li>
         <li><a href="/quizz">Quizz</a></li>
         <li><a href="/vos-photos">Vos Photos</a></li>
+        <li><a href="/login">Se connecter</a></li>
+        <li><a href="/signup">S'inscrire</a></li>
+
       </ul>
     </div>
   );

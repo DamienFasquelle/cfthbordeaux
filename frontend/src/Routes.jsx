@@ -8,7 +8,7 @@ const AppRoutes = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sitemap" element={<SiteMap />} />
+        <Route path="/sitemap" element={<SiteMap />} />    
       </Routes>
     </Router>
   );

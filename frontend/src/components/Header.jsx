@@ -60,6 +60,11 @@ const Header = () => {
                 Vos Photos
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/login" className="nav-link text-dark fw-bold px-2 py-1 rounded-lg">
+                Se connecter
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

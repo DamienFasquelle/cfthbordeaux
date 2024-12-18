@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -23,9 +24,10 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/upload', name: 'upload')]
-    public function upload(Request $request, EntityManagerInterface $em): Response
+    #[Route('/api/upload', name: 'api_upload', methods: ['POST'])]
+    public function upload(Request $request, EntityManagerInterface $em): JsonResponse
     {
+        dd($request);
         $image = new Image();
         $form = $this->createForm(ImageType::class, $image);
         $form->handleRequest($request);
@@ -42,8 +44,7 @@ class HomeController extends AbstractController
                         $fileName
                     );
                 } catch (FileException $e) {
-                    $this->addFlash('danger', 'Erreur lors de l\'upload.');
-                    return $this->redirectToRoute('upload');
+                    return new JsonResponse(['error' => 'Erreur lors de l\'upload.'], 400);
                 }
 
                 $image->setFilePath($fileName);
@@ -52,13 +53,10 @@ class HomeController extends AbstractController
                 $em->persist($image);
                 $em->flush();
 
-                $this->addFlash('success', 'Image uploadée avec succès.');
-                return $this->redirectToRoute('upload');
+                return new JsonResponse(['success' => 'Image uploadée avec succès.'], 200);
             }
         }
 
-        return $this->render('upload.html.twig', [
-            'form' => $form->createView(),
-        ]);
+        return new JsonResponse(['error' => 'Données invalides.'], 400);
     }
 }
